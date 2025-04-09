@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modern Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0a192f;
+            color: #64ffda;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            display: block;
+            border: 3px solid #64ffda;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #112240;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #ccd6f6;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #64ffda;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #64ffda;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #8892b0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #112240;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #ccd6f6;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #8892b0;
+        }
+
+        footer {
+            background: #112240;
+            color: #ccd6f6;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mate Paić Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                Hi, I’m Mate Paić, a passionate software developer with 3 years of experience in the industry. I thrive on building scalable, efficient, and user-friendly applications while embracing the challenges of problem-solving and continuous learning. My journey in tech has been driven by a deep love for clean code, innovative solutions, and exploring new technologies.
+            </p>
+            <p>
+                I enjoy tackling complex problems, whether it’s optimizing code, designing robust systems, or solving algorithmic challenges. My expertise spans front-end and back-end development, with a focus on creating seamless, high-performance applications.
+            </p>
+            <p>Here are three projects I’m particularly proud of(working on second currently):</p>
+            <ul>
+                <li>
+                    <strong>Ski store, React Redux Application</strong>: A dynamic, state-driven web app that showcases my ability to build interactive user interfaces using modern front-end technologies.
+                </li>
+                <li>
+                    <strong>Car auctions, Microservices with .NET, RabbitMQ, and Next.js</strong>: A scalable, distributed system that demonstrates my skills in designing and implementing microservices architecture, message queuing, and full-stack development.
+                </li>
+                <li>
+                    <strong>MERN Stack Doctor Appointment Booking App</strong>: React JS, MongoDB, Express JS, Node JS and TailwindCSS are used to build appointment booking website, so It will be a MERN Stack project
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Ski store</h3>
+                    <h5><a href="https://github.com/MatePaic/Ski-store">Github</a></h5>
+                    <h5>E-commerce store for ski snowboard equipment</h5>
+                    <p>.Net WebAPI application using the dotnet CLI</p>
+                    <p>Created a client side front-end React single page application for the stores user interface</p>
+                    <p>Implemented the Repository, Unit of Work and specification pattern in .net core</p>
+                    <p>Used Entity Framework to write code that queries and updates the database</p>
+                    <p>Used ASP.NET Identity for login and registration</p>
+                    <p>Using Redux for client side state management</p>
+                    <p>Using React Router to navigate between routes on the client</p>
+                    <p>Used Automapper for shaping data</p>
+                    <p>Build a great looking UI using Material Design</p>
+                    <p>Making reusable form components using React hook form</p>
+                    <p>Implemented Paging, Sorting, Searching and Filtering</p>
+                    <p>Created orders from the shopping cart</p>
+                    <p>Accepting payments via Stripe using the new EU standards for 3D secure</p>
+                    <p>Added discount coupon promo code</p>
+                    <p>CI/CD workflows using GitHub actions</p>
+                    <p>Publishing the application to Azure</p>
+                </div>
+                <div class="project-card">
+                    <h3>Car auctions</h3>
+                    <h5><a href="https://github.com/MatePaic/Car-auction">Github</a></h5>
+                    <h5> Users are able to advertise their cars on our auction site and other users will be able to place bids on those cars</h5>
+                    <p>Created several backend services using .Net, Postgres and MongoDB that provide functionality for the app</p>
+                    <p>Service to service communication using RabbitMQ and gRPC</p>
+                    <p>Using IdentityServer as the identity provider</p>
+                    <p>Creating a gateway using Microsoft YARP</p>
+                    <p>Dockerizing our different services</p>
+                    <p>Building a client side app with Next.js and Tailwind CSS using the new App Router functionality</p>
+                    <h5>TODO:</h5>
+                    <p>Using SignalR for push notifications to the client app</p>
+                    <p>Publishing the app locally using docker compose</p>
+                    <p>Unit and integration testing with XUnit</p>
+                    <p>Publishing locally to Kubernetes</p>
+                    <p>Publishing the app to a Kubernetes cluster on the internet</p>
+                </div>
+                <div class="project-card">
+                    <h3>Doctor appointment</h3>
+                    <h5><a href="https://github.com/MatePaic/Doctor-Appointment">Github</a></h5>
+                    <h5>This full stack appointment booking system can be used by a doctor or a hospital or a patient</h5>
+                    <p>Three level of authentication: Patient, Doctor, Admin(Hospital)</p>
+                    <p>First one is that patient can login on the website, book appointment with doctor and manage the booked appointment</p>
+                    <p>Second one is doctor login, so that doctor can login and check the appointment and their earning.</p>
+                    <p>Doctor can also update their profile also from dashboard</p>
+                    <p>Third one is Admin Dashboard where admin can manages the appointment and admin can also manage the doctor profile</p>
+                    <p>Integration the online payment gateways so that user can pay the appointment fee online on this website</p>
+                    <h5>TODO:</h5>
+                    <p>Created UI with React and now working on authentication and payment</p>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:your.email@example.com" style="color: #64ffda;">mate.paic1997@gmail.com</a>, phone number or Linkedin.</p>
+            <p>Phone number: +385 99 222 4179</p>
+            <p>Linkedin: <a href="https://www.linkedin.com/in/mpaic/">https://www.linkedin.com/in/mpaic/</a></p>
+            <p>Github: <a href="https://github.com/MatePaic">https://github.com/MatePaic</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Modern Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
